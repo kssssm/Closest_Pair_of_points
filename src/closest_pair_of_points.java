@@ -126,18 +126,35 @@ public class closest_pair_of_points {
             System.out.println("(" + x + "," + y + ")");
         }
 
+        Arrays.sort(pointarr, new Comparator<point>() {
+            @Override
+            public int compare(point o1, point o2) {
+                if(o1.getX()>o2.getX()){
+                    return 1;
+                }else if(o1.getX()<o2.getX()){
+                    return -1;
+                }else return 0;
+            }
+        });
+        System.out.println();
+        System.out.println("정렬 후");
+        for (int j = 0; j < n; j++) {
+            x = pointarr[j].x;
+            y = pointarr[j].y;
+            System.out.print("(" + x + "," + y + ")");
+        }
         closest_pair_of_points cpp = new closest_pair_of_points();
         closest2point = new point[2];
         closest2point = cpp.ClosestPair(pointarr,0,n-1);
-
+        
         int closestLx = closest2point[0].x;
         int closestLy = closest2point[0].y;
         int closestRx = closest2point[1].x;
         int closestRy = closest2point[1].y;
+        System.out.println();
         System.out.print("가장 가까운 두점은 (" + closestLx + "," + closestLy + ")");
         System.out.print("와");
         System.out.println("(" + closestRx + "," + closestRy + ")");
-
 
 
 
