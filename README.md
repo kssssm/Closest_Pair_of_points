@@ -128,7 +128,7 @@ ___
  배열 middle points를 오름 차순으로 정렬한 뒤 d를 이용해 계산 횟수를 줄임
  
  
-
+!(https://github.com/kssssm/FractionalKanpsack/blob/master/스크린샷%202021-04-14%20오후%205.28.08.png)
 
  
  
